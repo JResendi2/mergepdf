@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\pdfController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,6 +14,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [pdfController::class, "index"])->name("index");
+Route::post('/merge', [pdfController::class, "merge"])->name("merge");
+Route::get('/get-pdf/{filemane}', [pdfController::class, "getPDF"])->name("get-pdf");
+Route::get('/download-pdf/{filemane}', [pdfController::class, "downloadPdf"])->name("download-pdf");

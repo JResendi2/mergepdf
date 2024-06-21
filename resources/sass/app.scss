@@ -1,0 +1,112 @@
+// Fonts
+@import url('https://fonts.bunny.net/css?family=Nunito');
+
+// Variables
+@import 'variables';
+
+// Bootstrap
+@import 'bootstrap/scss/bootstrap';
+
+.header, .footer{
+    background-color: $primary;
+    height: 5rem;
+    text-align: center;
+    align-content: center;
+    margin-bottom: 0.5rem;
+}
+
+.footer{
+    height: 3rem;
+    margin-bottom: 0;
+}
+
+.my-container{
+    justify-content: center;
+    align-items: center;
+    border: solid $border-color 2px;
+    border-bottom: none;
+    min-height: 100vh;
+    padding-bottom: 5rem;
+    border-start-end-radius: 15px;
+}
+
+p{
+    margin: 0;
+}
+
+.nav{
+    margin-bottom: -2px;
+}
+
+.nav-item{
+    border: solid $border-color 2px;
+    padding: 5px 15px;
+    font-size: 1.2rem;
+    p{
+        margin: 0;
+    }
+}
+#item-1{
+    border-right: none;
+    border-start-start-radius: 15px;
+}
+#item-3{
+    border-left: none;
+    border-start-end-radius: 15px;
+}
+
+.active {
+    border-bottom-color: #f8f9fa;
+}
+.active p{
+    color: black;
+    font-size: 1.5rem;
+}
+
+
+.drop-area{
+    border-radius: 6px;
+    border: dashed $primary 2px;
+    height: 24rem;
+    width: min(50rem, 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 4rem 0;
+    gap: 2rem;
+    margin: 0 auto;
+    transition: transform 0.3s ease;
+}
+
+.drop-area-active{
+    background-color: #b8d4fe;
+}
+
+.drop-area h4{
+    color: $primary;
+    text-align: center;
+}
+
+.drop-area-animation{
+    transform: scale(1.05);
+}
+
+.btn-suvir{
+    cursor: pointer;
+}
+
+.btn-pdf-next:hover, .btn-pdf-prev:hover, #btn-add-pdf:hover{
+    background-color: #b8d4fe;
+}
+
+
+#item-1, #item-2, #item-3{
+    cursor: pointer;
+}
+
+#frame-pdf {
+    height: 850px;
+    border-radius: 20px;
+    border:solid $azul 2px;
+}
